@@ -10,6 +10,11 @@ def hello():
 def my_string():
     return 'i love vim'
 
+@app.route('/user/<username>')
+def profile(username):
+    return f'hello {username}'
+
+
 # 0.0.0.0 accessible by anyone in network
 
 app.run('localhost', 5000)
