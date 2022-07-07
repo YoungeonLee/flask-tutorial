@@ -17,5 +17,5 @@ def profile(username):
 
 # 0.0.0.0 accessible by anyone in network
 
-app.run('localhost', 5000)
+app.run('localhost', 3000)
 
