@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Todo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <form action="http://localhost:3000/todos" method="post">
+      <label for="deadline_unix_timestamp">Deadline in unix timestamp (seconds)</label><br>
+      <input type="text" id="deadline_unix_timestamp" name="deadline_unix_timestamp"><br>
+      <script>
+        <!-- set current time as the default value for deadline_unix_timestamp   -->
+        document.querySelector('#deadline_unix_timestamp').value = (Date.now() / 1000).toFixed();
+      </script>
+      <label for="name">Name</label><br>
+      <input type="text" id="name" name="name"><br>
+      <label for="description">Description</label><br>
+      <input type="text" id="description" name="description"><br>
+      <br>
+      <input type="submit" value="Add Too">
+    </form>
+</body>
+</html>
